@@ -16,4 +16,49 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+  public static class MotorConstants{
+    /* MAKE SURE THE MOTOR NUMBERS ARE CORRECT */
+    //ASSUMING THAT IT WOULD GO FR, FL, BR, BL, LIKE IN OTHER SWERVE STUFF
+    //ENCODERS ARE 1, CHECK THAT
+    public static final int FRONT_RIGHT_DRIVE = 1;
+    public static final boolean FRONT_RIGHT_DRIVE_REVERSE = false;
+    public static final double FRONT_RIGHT_DRIVE_ENCODER = 1;
+    public static final int FRONT_RIGHT_TURN = 2;
+    public static final boolean FRONT_RIGHT_TURN_REVERSE = false;
+    public static final double FRONT_RIGHT_TURN_ENCODER = 1;
+
+     public static final int FRONT_LEFT_DRIVE = 3;
+    public static final boolean FRONT_LEFT_DRIVE_REVERSE = false;
+    public static final double FRONT_LEFT_DRIVE_ENCODER = 1;
+    public static final int FRONT_LEFT_TURN = 4;
+    public static final boolean FRONT_LEFT_TURN_REVERSE = false;
+    public static final double FRONT_LEFT_TURN_ENCODER = 1;
+
+     public static final int BACK_RIGHT_DRIVE = 5;
+    public static final boolean BACK_RIGHT_DRIVE_REVERSE = false;
+    public static final double BACK_RIGHT_DRIVE_ENCODER = 1;
+    public static final int BACK_RIGHT_TURN = 6;
+    public static final boolean BACK_RIGHT_TURN_REVERSE = false;
+    public static final double BACK_RIGHT_TURN_ENCODER = 1;
+
+     public static final int BACK_LEFT_DRIVE = 7;
+    public static final boolean BACK_LEFT_DRIVE_REVERSE = false;
+    public static final double BACK_LEFT_DRIVE_ENCODER = 1;
+    public static final int BACK_LEFT_TURN = 8;
+    public static final boolean BACK_LEFT_TURN_REVERSE = false;
+    public static final double BACK_LEFT_TURN_ENCODER = 1;
+
+    //CHECK MOTOR IDs, probably wrong
+    public static final int YAW_1 = 9;
+    public static final boolean YAW_1_REVERSE = false;
+    public static final int YAW_2 = 10;
+    public static final boolean YAW_2_REVERSE = false;
+
+    public static final int ROLL = 11; 
+    public static final boolean ROLL_REVERSE = false;
+
+    public static final int PITCH = 12;
+    public static final boolean PITCH_REVERSE = false;
+
+  }
 }
