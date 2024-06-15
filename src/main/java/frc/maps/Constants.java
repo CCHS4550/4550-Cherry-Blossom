@@ -92,6 +92,30 @@ public final class Constants {
   }
 
   public static class SwerveConstants{
+    //ports for aabsolute encoders
+    public static final int FRONT_RIGHT_ABSOLUTE_ENCODER = 0;
+    public static final int FRONT_LEFT_ABSOLUTE_ENCODER =1;
+    public static final int BACK_RIGHT_ABSOLUTE_ENCODER = 2;
+    public static final int BACK_LEFT_ANSOLUTE_ENCODER = 3;
+    //absolute encoder offsets
+    public static final double FRONT_RIGHT_ABSOLUTE_ENCODER_OFFSET = 0;
+    public static final double FRONT_LEFT_ABSOLUTE_ENCODER_OFFSET = 0;
+    public static final double BACK_RIGHT_ABSOLUTE_ENCODER_OFFSET = 0;
+    public static final double BACK_LEFT_ABSOLUTE_ENCODER_OFFSET = 0;
+
+    //Robot Constants (change/calculate with SysId)
+    //max speed in free sprint: used in getting velocities of swerve modules
+    public static final double MAX_DRIVE_SPEED_METERS_PER_SECOND_THEORETICAL = 0; //calculate this, on crescendo repo it's 4.72
+
+
+    //velocity limtis
+    public static final double MAX_DRIVE_SPEED_METERS_PER_SECOND = 5;
+    public static final double MAX_ANGULAR_SPEED_RADIANS_PER_SECOND = 4 * Math.PI;
+
+    //Rate/Acceleraation Limiters
+    public static final double DRIVE_RATE_LIMIT = MAX_DRIVE_SPEED_METERS_PER_SECOND * 1.5;
+    public static final double TURN_RATE_LIMIT = MAX_ANGULAR_SPEED_RADIANS_PER_SECOND;
+    
 
   }
 
