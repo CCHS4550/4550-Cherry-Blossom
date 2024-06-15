@@ -1,3 +1,32 @@
+package frc.maps;
+
+import static edu.wpi.first.units.Units.Inch;
+import static edu.wpi.first.units.Units.Inches;
+
+import com.pathplanner.lib.path.PathConstraints;
+
+import edu.wpi.first.apriltag.AprilTagFieldLayout;
+import edu.wpi.first.apriltag.AprilTagFields;
+import edu.wpi.first.math.Matrix;
+import edu.wpi.first.math.VecBuilder;
+import edu.wpi.first.math.geometry.Pose2d;
+import edu.wpi.first.math.geometry.Rotation2d;
+import edu.wpi.first.math.geometry.Rotation3d;
+import edu.wpi.first.math.geometry.Transform2d;
+import edu.wpi.first.math.geometry.Transform3d;
+import edu.wpi.first.math.geometry.Translation2d;
+import edu.wpi.first.math.geometry.Translation3d;
+import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
+import edu.wpi.first.math.numbers.N1;
+import edu.wpi.first.math.numbers.N3;
+import edu.wpi.first.math.trajectory.TrapezoidProfile;
+import edu.wpi.first.math.util.Units;
+import frc.helpers.AllianceFlipUtil;
+//took imports from Constants.java, 4550-Crescendo-2024 repo
+//remove as needed
+
+
+
 // Copyright (c) FIRST and other WPILib contributors.
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
@@ -59,6 +88,34 @@ public final class Constants {
 
     public static final int PITCH = 12;
     public static final boolean PITCH_REVERSE = false;
+
+  }
+
+  public static class SwerveConstants{
+
+  }
+
+  public static class SwerveConversionConstants{
+
+    public static final double WHEEL_CIRCUMFERENCE = Units.inchesToMeters(4*Math.PI);
+
+    //turn motor constants
+    //150/7 rotations of turn motor = 1 spin of the wheel
+    //how much of a rotation the wheel turns for one rotation of the turn motor
+    public static final double TURN_MOTOR_ROTATIONS_TO_WHEEL_ROTATIONS = 7.0/150.0;
+    //150/7 rotations converted into radians
+    public static final double TURN_MOTOR_ROTATIONS_TO_WHEEL_ROTATIONS_RADIANS = Units.rotationsToRadians(TURN_MOTOR_ROTATIONS_TO_WHEEL_ROTATIONS);
+    //radians per second
+    public static final double TURN_MOTOR_RADIANS_PER_SECOND = TURN_MOTOR_ROTATIONS_TO_WHEEL_ROTATIONS_RADIANS/60.0;
+
+    //drive motor constants
+    //6.75 rotations of drive motor to 1 wheel spin
+    public static final double DRIVE_MOTOR_ROTATIONS_TO_WHEEL_ROTATIONS = 1.0/6.75;
+    //distance traveled per rotation
+    public static final double HORIZONTAL_DISTANCE_TRAVELED_PER_MOTOR_REVOLUTION = WHEEL_CIRCUMFERENCE*DRIVE_MOTOR_ROTATIONS_TO_WHEEL_ROTATIONS;
+    public static final double HORIZONTAL_DISTANCE_TRAVELED_PER_MOTOR_REVOLUTION_PER_SECOND = HORIZONTAL_DISTANCE_TRAVELED_PER_MOTOR_REVOLUTION/60.0;
+
+
 
   }
 }
