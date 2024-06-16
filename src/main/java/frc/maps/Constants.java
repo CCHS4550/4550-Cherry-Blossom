@@ -115,8 +115,13 @@ public final class Constants {
     //Rate/Acceleraation Limiters
     public static final double DRIVE_RATE_LIMIT = MAX_DRIVE_SPEED_METERS_PER_SECOND * 1.5;
     public static final double TURN_RATE_LIMIT = MAX_ANGULAR_SPEED_RADIANS_PER_SECOND;
-    
 
+    public static final TrapezoidProfile.Constraints thetaControlConstraints = new TrapezoidProfile.Constraints(MAX_ANGULAR_SPEED_RADIANS_PER_SECOND, TURN_RATE_LIMIT);
+    public static final TrapezoidProfile.Constraints driveControlConstraints  =  new TrapezoidalProfile.Constraints(MAX_DRIVE_SPEED_METERS_PER_SECOND, DRIVE_RATE_LIMIT);
+`   //Front to Back
+    public static final double WHEEL_BASE = Units.inchesToMeters(0);
+    //Right to Left
+    public static final double TRACK_WIDTH = Units.inchesToMeters(0);
   }
 
   public static class SwerveConversionConstants{
