@@ -1,27 +1,13 @@
 package frc.maps;
 
-import static edu.wpi.first.units.Units.Inch;
-import static edu.wpi.first.units.Units.Inches;
 
-import com.pathplanner.lib.path.PathConstraints;
 
-import edu.wpi.first.apriltag.AprilTagFieldLayout;
-import edu.wpi.first.apriltag.AprilTagFields;
-import edu.wpi.first.math.Matrix;
-import edu.wpi.first.math.VecBuilder;
-import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.math.geometry.Rotation2d;
-import edu.wpi.first.math.geometry.Rotation3d;
-import edu.wpi.first.math.geometry.Transform2d;
-import edu.wpi.first.math.geometry.Transform3d;
-import edu.wpi.first.math.geometry.Translation2d;
-import edu.wpi.first.math.geometry.Translation3d;
-import edu.wpi.first.math.kinematics.SwerveDriveKinematics;
-import edu.wpi.first.math.numbers.N1;
-import edu.wpi.first.math.numbers.N3;
+// import com.pathplanner.lib.path.PathConstraints;
+
+
 import edu.wpi.first.math.trajectory.TrapezoidProfile;
 import edu.wpi.first.math.util.Units;
-import frc.helpers.AllianceFlipUtil;
+// import frc.helpers.AllianceFlipUtil;
 //took imports from Constants.java, 4550-Crescendo-2024 repo
 //remove as needed
 
@@ -31,7 +17,7 @@ import frc.helpers.AllianceFlipUtil;
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot;
+
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -117,8 +103,8 @@ public final class Constants {
     public static final double TURN_RATE_LIMIT = MAX_ANGULAR_SPEED_RADIANS_PER_SECOND;
 
     public static final TrapezoidProfile.Constraints thetaControlConstraints = new TrapezoidProfile.Constraints(MAX_ANGULAR_SPEED_RADIANS_PER_SECOND, TURN_RATE_LIMIT);
-    public static final TrapezoidProfile.Constraints driveControlConstraints  =  new TrapezoidalProfile.Constraints(MAX_DRIVE_SPEED_METERS_PER_SECOND, DRIVE_RATE_LIMIT);
-`   //Front to Back
+    public static final TrapezoidProfile.Constraints driveControlConstraints  =  new TrapezoidProfile.Constraints(MAX_DRIVE_SPEED_METERS_PER_SECOND, DRIVE_RATE_LIMIT);
+   //Front to Back
     public static final double WHEEL_BASE = Units.inchesToMeters(0);
     //Right to Left
     public static final double TRACK_WIDTH = Units.inchesToMeters(0);
